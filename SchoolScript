@@ -1,4 +1,4 @@
-<code style="color : lightskyblue">--### IT BELONGS IN: SERVER SCRIPT SERVICE
+--### IT BELONGS IN: SERVER SCRIPT SERVICE
 --### Basic code that creates a hypothetical school, and students
 --###
 --### EXAMPLE OF A CODE THAT YOU PUT INTO: SERVER SCRIPT SERVICE FOR THIS TO WORK
@@ -10,7 +10,7 @@
 --schoole:AddStudent("Adam", 15)
 --for i, v in pairs(schoole) do
 --	print(v)
---end</code>
+--end
 
 
 local school = {}
