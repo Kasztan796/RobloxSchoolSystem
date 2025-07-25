@@ -1,0 +1,36 @@
+<code style="color : lightskyblue">--### IT BELONGS IN: SERVER SCRIPT SERVICE
+--### Basic code that creates a hypothetical school, and students
+--###
+--### EXAMPLE OF A CODE THAT YOU PUT INTO: SERVER SCRIPT SERVICE FOR THIS TO WORK
+
+--local sss = game:GetService("ServerScriptService")
+--local schools = require(sss.SCRIPTNAME)
+
+--local schoole = schools.new("Rodzyn's Elementary")
+--schoole:AddStudent("Adam", 15)
+--for i, v in pairs(schoole) do
+--	print(v)
+--end</code>
+
+
+local school = {}
+school.__index = school
+
+function school.new(name : string)
+	local newschool = {}
+	newschool.Name = name
+	setmetatable(newschool, school)
+	return newschool
+end
+
+function school:AddStudent(name : string, age : number)
+	local newstudent = {}
+	newstudent.Name = name
+	newstudent.Age = age
+	newstudent.Grades = {English = math.random(1,6), Math = math.random(1,6), Biology = math.random(1,6), Physics = math.random(1,6), Chemistry = math.random(1,6)}
+	
+	table.insert(self, newstudent)
+	return newstudent
+end
+
+return school
